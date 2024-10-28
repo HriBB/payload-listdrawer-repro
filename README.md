@@ -1,19 +1,21 @@
-# Climb.si PayloadCMS
-
-Localhost:
-
-- [payload](http://localhost:3000)
-- [website](http://localhost:5173)
-
 # Install
 
 ```bash
-# run mongo container
+# 1. run mongo container
 docker compose up -d
 
-# install dependencies
+# 2. install dependencies
 pnpm install
 
-# run development server
+# 3. run development server
 pnpm dev
+
+# 4. open admin dashboard
+open http://localhost:3000/admin
+
+# 5. click on "Seed your database"
+
+# 6. open one of the Images
+
+# 7. click on "Click me to trigger error"
 ```
