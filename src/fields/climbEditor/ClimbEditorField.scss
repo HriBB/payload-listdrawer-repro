@@ -1,0 +1,12 @@
+//@import '~payload/scss';
+
+.climb-editor-field {
+  background: none;
+  //border: 1px solid red;
+
+  .list-drawer__toggler {
+    border: 2px solid red;
+    padding: 10px 8px;
+    white-space: nowrap;
+  }
+}

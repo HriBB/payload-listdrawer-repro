@@ -1,0 +1,90 @@
+{
+  "name": "climbsi-payload",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env NODE_OPTIONS=\"${NODE_OPTIONS} --no-deprecation\" next dev",
+    "devturbo": "pnpm dev --turbo",
+    "devsafe": "rm -rf .next && pnpm dev",
+    "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
+    "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
+    "ci": "payload migrate && pnpm build",
+    "payload": "payload",
+    "generate:types": "payload generate:types",
+    "generate:schema": "payload-graphql generate:schema",
+    "generate:importmap": "payload generate:importmap",
+    "delete:guides": "payload run ./src/scripts/delete-guides.ts",
+    "import:grades": "payload run ./src/scripts/import-grades.ts",
+    "import:location-types": "payload run ./src/scripts/import-location-types.ts",
+    "import:locations": "payload run ./src/scripts/import-locations.ts",
+    "import:sectors": "payload run ./src/scripts/import-sectors.ts",
+    "import:images": "payload run ./src/scripts/import-images.ts",
+    "import:routes": "payload run ./src/scripts/import-routes.ts",
+    "import:image-routes": "payload run ./src/scripts/import-image-routes.ts",
+    "import:all": "pnpm import:grades && pnpm import:location-types && pnpm import:locations && pnpm import:sectors && pnpm import:images && pnpm import:routes && pnpm import:image-routes"
+  },
+  "engines": {
+    "node": "^18.20.2 || >=20.9.0"
+  },
+  "dependencies": {
+    "@payloadcms/db-mongodb": "3.0.0-beta.111",
+    "@payloadcms/db-postgres": "3.0.0-beta.111",
+    "@payloadcms/graphql": "3.0.0-beta.111",
+    "@payloadcms/next": "3.0.0-beta.111",
+    "@payloadcms/plugin-form-builder": "3.0.0-beta.111",
+    "@payloadcms/plugin-nested-docs": "3.0.0-beta.111",
+    "@payloadcms/plugin-seo": "3.0.0-beta.111",
+    "@payloadcms/richtext-lexical": "3.0.0-beta.111",
+    "@payloadcms/richtext-slate": "3.0.0-beta.111",
+    "@payloadcms/translations": "3.0.0-beta.111",
+    "@payloadcms/ui": "3.0.0-beta.111",
+    "babel-plugin-react-compiler": "0.0.0-experimental-48eb8f4-20240822",
+    "canvas": "^2.11.2",
+    "clsx": "^2.1.1",
+    "cross-env": "^7.0.3",
+    "download": "^8.0.0",
+    "fscreen": "^1.2.0",
+    "graphiql": "^3.7.1",
+    "graphql": "^16.8.2",
+    "graphql-type-json": "^0.3.2",
+    "iconoir-react": "^7.9.0",
+    "immutability-helper": "^3.1.1",
+    "jsdom": "^25.0.1",
+    "leaflet": "^1.9.4",
+    "next": "15.0.0-canary.173",
+    "paper": "^0.12.18",
+    "payload": "3.0.0-beta.111",
+    "react": "19.0.0-rc-3edc000d-20240926",
+    "react-dom": "19.0.0-rc-3edc000d-20240926",
+    "react-leaflet": "5.0.0-rc.1",
+    "react-reconciler": "0.31.0-rc-cae764ce-20241025",
+    "react-use-measure": "^2.1.1",
+    "sharp": "0.32.6",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/download": "^8.0.5",
+    "@types/fscreen": "^1.0.4",
+    "@types/leaflet": "^1.9.14",
+    "@types/node": "^20.14.9",
+    "@types/react": "npm:types-react@19.0.0-rc.0",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.0",
+    "@types/react-reconciler": "^0.28.8",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "15.0.0-canary.104",
+    "ts-essentials": "^10.0.2",
+    "typescript": "5.5.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "npm:types-react@19.0.0-rc.0",
+      "@types/react-dom": "npm:types-react-dom@19.0.0-rc.0"
+    }
+  },
+  "overrides": {
+    "@types/react": "npm:types-react@19.0.0-rc.0",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.0"
+  }
+}
